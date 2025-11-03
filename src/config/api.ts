@@ -10,6 +10,6 @@ export const API_ENDPOINTS = {
 
 // TODO: Adicione sua chave da API do Google Maps aqui
 // Obtenha em: https://console.cloud.google.com/
-export const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'YOUR_GOOGLE_MAPS_API_KEY_HERE';
+export const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyBrAW_lty4wWW5MOGSM8kWuT7Y702MrNwE';
 
 export default API_ENDPOINTS;
