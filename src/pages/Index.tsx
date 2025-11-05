@@ -33,6 +33,18 @@ const Index = () => {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
   };
 
+  const resetWizard = () => {
+    setWizardData({
+      coordinates: null,
+      userData: {
+        userName: "",
+        plantType: "",
+      },
+      analysisResult: null,
+    });
+    setCurrentStep(1);
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
@@ -63,6 +75,7 @@ const Index = () => {
               coordinates={wizardData.coordinates}
               userData={wizardData.userData}
               onBack={goToPrevStep}
+              onNewAnalysis={resetWizard}
             />
           )}
         </div>

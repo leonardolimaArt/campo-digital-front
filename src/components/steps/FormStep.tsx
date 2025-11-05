@@ -76,7 +76,7 @@ const FormStep = ({
           size="lg"
           className="w-48"
         >
-          BACK
+          VOLTAR
         </Button>
         <Button
           type="submit"
@@ -84,7 +84,7 @@ const FormStep = ({
           size="lg"
           className="w-48"
         >
-          NEXT
+          PRÓXIMO
         </Button>
       </div>
     </form>

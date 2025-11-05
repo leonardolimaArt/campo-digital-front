@@ -4,18 +4,21 @@ import { ApiService } from "@/services/api";
 import type { Coordinates, UserData, AnalysisResponse } from "@/types";
 import { Loader2, CloudSun, Sprout } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 interface ResultsStepProps {
   coordinates: Coordinates;
   userData: UserData;
   onBack: () => void;
+  onNewAnalysis: () => void;
 }
 
-const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
+const ResultsStep = ({ coordinates, userData, onBack, onNewAnalysis }: ResultsStepProps) => {
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState<AnalysisResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAnalysis = async () => {
@@ -55,9 +58,17 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
         <div className="rounded-lg border-2 border-destructive bg-destructive/10 p-8 text-center">
           <p className="text-destructive font-medium">{error}</p>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-between">
           <Button onClick={onBack} variant="secondary" size="lg" className="w-48">
-            BACK
+            VOLTAR
+          </Button>
+          <Button
+            onClick={onNewAnalysis}
+            variant="outline"
+            size="lg"
+            className="w-48"
+          >
+            NOVA ANÁLISE
           </Button>
         </div>
       </div>
@@ -70,9 +81,17 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
         <div className="rounded-lg border-2 border-border bg-muted p-8 text-center">
           <p className="text-muted-foreground">Nenhum resultado disponível</p>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-between">
           <Button onClick={onBack} variant="secondary" size="lg" className="w-48">
-            BACK
+            VOLTAR
+          </Button>
+          <Button
+            onClick={onNewAnalysis}
+            variant="outline"
+            size="lg"
+            className="w-48"
+          >
+            NOVA ANÁLISE
           </Button>
         </div>
       </div>
@@ -113,9 +132,17 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
         </div>
       </div>
 
-      <div className="flex justify-start">
+      <div className="flex justify-between">
         <Button onClick={onBack} variant="secondary" size="lg" className="w-48">
-          BACK
+          VOLTAR
+        </Button>
+        <Button
+          onClick={onNewAnalysis}
+          variant="outline"
+          size="lg"
+          className="w-48"
+        >
+          NOVA ANÁLISE
         </Button>
       </div>
     </div>

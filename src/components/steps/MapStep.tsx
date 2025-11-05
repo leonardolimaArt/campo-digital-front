@@ -155,7 +155,7 @@ const MapStep = ({ coordinates, onCoordinatesChange, onNext }: MapStepProps) => 
           size="lg"
           className="w-48"
         >
-          NEXT
+          PRÓXIMO
         </Button>
       </div>
     </div>
