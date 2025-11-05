@@ -79,7 +79,7 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
     );
   }
 
-  const displayPlantType = result.plantType || userData.plantType || "Solo sem plantio";
+  const displayPlantType = result.plant_type || userData.plantType || "Solo sem plantio";
 
   return (
     <div className="flex flex-col gap-6">
@@ -98,7 +98,7 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
           <h3 className="text-xl font-semibold uppercase">Análise Climática</h3>
         </div>
         <div className="bg-card rounded p-4 border border-border">
-          <p className="text-foreground whitespace-pre-wrap">{result.weatherAnalysis}</p>
+          <p className="text-foreground whitespace-pre-wrap">{result.weather_analysis}</p>
         </div>
       </div>
 
@@ -109,7 +109,7 @@ const ResultsStep = ({ coordinates, userData, onBack }: ResultsStepProps) => {
           <h3 className="text-xl font-semibold uppercase">Análise do Solo</h3>
         </div>
         <div className="bg-card rounded p-4 border border-border">
-          <p className="text-foreground whitespace-pre-wrap">{result.soilAnalysis}</p>
+          <p className="text-foreground whitespace-pre-wrap">{result.soil_analysis}</p>
         </div>
       </div>
 

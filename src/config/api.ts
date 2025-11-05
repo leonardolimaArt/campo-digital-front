@@ -1,11 +1,11 @@
 // API Configuration
 // All API endpoints should be defined here
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://campo-digital-backend-production.up.railway.app/';
 
 export const API_ENDPOINTS = {
   // Main analysis endpoint that receives coordinates, userName, and plantType
-  ANALYZE_LOCATION: `${API_BASE_URL}/api/analyze`,
+  ANALYZE_LOCATION: `https://campo-digital-backend-production.up.railway.app/api/v1/analysis`,
 } as const;
 
 // TODO: Adicione sua chave da API do Google Maps aqui

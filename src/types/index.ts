@@ -9,9 +9,9 @@ export interface UserData {
 }
 
 export interface AnalysisResponse {
-  plantType?: string;
-  weatherAnalysis: string;
-  soilAnalysis: string;
+  plant_type?: string;
+  weather_analysis: string;
+  soil_analysis: string;
 }
 
 export interface WizardData {
