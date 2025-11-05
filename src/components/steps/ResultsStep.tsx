@@ -98,7 +98,7 @@ const ResultsStep = ({ coordinates, userData, onBack, onNewAnalysis }: ResultsSt
     );
   }
 
-  const displayPlantType = result.plant_type || userData.plantType || "Solo sem plantio";
+  const displayPlantType = result.plant_type || userData.plant_type || "Solo sem plantio";
 
   return (
     <div className="flex flex-col gap-6">

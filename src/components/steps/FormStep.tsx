@@ -21,7 +21,7 @@ const FormStep = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.userName.trim()) {
+    if (formData.username.trim()) {
       onUserDataChange(formData);
       onNext();
     }
@@ -36,14 +36,14 @@ const FormStep = ({
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
       <div className="space-y-6 bg-card rounded-lg p-8 border-2 border-border shadow-lg">
         <div className="space-y-3">
-          <Label htmlFor="userName" className="text-base font-medium">
+          <Label htmlFor="username" className="text-base font-medium">
             Nome do Usuário
           </Label>
           <Input
-            id="userName"
+            id="username"
             type="text"
-            value={formData.userName}
-            onChange={(e) => handleChange("userName", e.target.value)}
+            value={formData.username}
+            onChange={(e) => handleChange("username", e.target.value)}
             placeholder="Digite seu nome"
             required
             className="h-12 text-base"
@@ -51,14 +51,14 @@ const FormStep = ({
         </div>
 
         <div className="space-y-3">
-          <Label htmlFor="plantType" className="text-base font-medium">
+          <Label htmlFor="plant_type" className="text-base font-medium">
             Tipo de Plantio
           </Label>
           <Input
-            id="plantType"
+            id="plant_type"
             type="text"
-            value={formData.plantType}
-            onChange={(e) => handleChange("plantType", e.target.value)}
+            value={formData.plant_type}
+            onChange={(e) => handleChange("plant_type", e.target.value)}
             placeholder="Ex: Lúpulo, Soja, etc. (opcional)"
             className="h-12 text-base"
           />
@@ -80,7 +80,7 @@ const FormStep = ({
         </Button>
         <Button
           type="submit"
-          disabled={!formData.userName.trim()}
+          disabled={!formData.username.trim()}
           size="lg"
           className="w-48"
         >

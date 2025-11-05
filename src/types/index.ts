@@ -4,8 +4,8 @@ export interface Coordinates {
 }
 
 export interface UserData {
-  userName: string;
-  plantType: string;
+  username: string;
+  plant_type: string;
 }
 
 export interface AnalysisResponse {

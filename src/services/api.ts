@@ -15,8 +15,8 @@ export class ApiService {
         body: JSON.stringify({
           latitude: coordinates.lat,
           longitude: coordinates.lng,
-          userName: userData.userName,
-          plantType: userData.plantType || null,
+          username: userData.username,
+          plant_type: userData.plant_type || null,
         }),
       });
 

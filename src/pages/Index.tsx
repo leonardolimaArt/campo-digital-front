@@ -11,8 +11,8 @@ const Index = () => {
   const [wizardData, setWizardData] = useState<WizardData>({
     coordinates: null,
     userData: {
-      userName: "",
-      plantType: "",
+      username: "",
+      plant_type: "",
     },
     analysisResult: null,
   });
@@ -37,8 +37,8 @@ const Index = () => {
     setWizardData({
       coordinates: null,
       userData: {
-        userName: "",
-        plantType: "",
+        username: "",
+        plant_type: "",
       },
       analysisResult: null,
     });
